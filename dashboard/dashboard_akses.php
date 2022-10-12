@@ -1,5 +1,5 @@
 <?php
-$default_login_email="kukuhtw@gmail.com";
-$default_login_password="password";
+$default_login_email=""; // your login email here
+$default_login_password=""; //put anything you like here for login to your dashboard
 
 ?>
