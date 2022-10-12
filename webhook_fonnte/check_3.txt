@@ -1,0 +1,6 @@
+BASE_END_POINT=http://139.59.234.51/invoice_belanja/API/API_proses_list_item.php
+apps_id=1
+json_encode posdata={"apps_id":"1","owner_id":"1","custom_id":"628129893706","text_list_item":"daftar belanja\n\n2 jus apel sunfresh\n2 jus jambu sunfresh\n3 jus jambu buavita\n1 botol aqua 600 ml\n2 box aqua 330 ml"}
+content_results={"status":"200","result":"Sukses!","randomsession":625885,"grand_total":0,"apps_id":"1","owner_id":"1","owner_email":null,"owner_whatsapp":null,"custom_id":"628129893706","saatini":"2022\/10\/04 00:02:06","list_available_product":null,"list_unavailable_product":["",{"nomorurut":1,"unavailable_product":"daftar belanja\n\n2 jus apel sunfresh\n2 jus jambu sunfresh\n3 jus jambu buavita\n1 botol aqua 600 ml\n2 box aqua 330 ml"}]}
+owner_id=1
+custom_id=628129893706

@@ -1,0 +1,77 @@
+[12-Oct-2022 07:28:15 Asia/Jakarta] PHP Notice:  Undefined variable: sessionappsid in C:\xampp\htdocs\invoice_belanja_client\dashboard\content_view_stats.php on line 16
+[12-Oct-2022 07:28:15 Asia/Jakarta] PHP Notice:  Undefined variable: sessionownerid in C:\xampp\htdocs\invoice_belanja_client\dashboard\content_view_stats.php on line 17
+[12-Oct-2022 07:28:15 Asia/Jakarta] PHP Notice:  Undefined variable: sessionappsid in C:\xampp\htdocs\invoice_belanja_client\dashboard\content_view_stats.php on line 72
+[12-Oct-2022 07:28:15 Asia/Jakarta] PHP Notice:  Undefined variable: sessionownerid in C:\xampp\htdocs\invoice_belanja_client\dashboard\content_view_stats.php on line 73
+[12-Oct-2022 07:28:15 Asia/Jakarta] PHP Fatal error:  Uncaught Error: Call to undefined function get_header_client_id() in C:\xampp\htdocs\invoice_belanja_client\dashboard\content_view_stats.php:75
+Stack trace:
+#0 C:\xampp\htdocs\invoice_belanja_client\dashboard\view_stats.php(20): include()
+#1 {main}
+  thrown in C:\xampp\htdocs\invoice_belanja_client\dashboard\content_view_stats.php on line 75
+[12-Oct-2022 07:29:00 Asia/Jakarta] PHP Notice:  Undefined variable: sessionappsid in C:\xampp\htdocs\invoice_belanja_client\dashboard\content_view_stats.php on line 16
+[12-Oct-2022 07:29:00 Asia/Jakarta] PHP Notice:  Undefined variable: sessionownerid in C:\xampp\htdocs\invoice_belanja_client\dashboard\content_view_stats.php on line 17
+[12-Oct-2022 07:29:00 Asia/Jakarta] PHP Fatal error:  Uncaught Error: Call to undefined function get_header_client_id() in C:\xampp\htdocs\invoice_belanja_client\dashboard\content_view_stats.php:73
+Stack trace:
+#0 C:\xampp\htdocs\invoice_belanja_client\dashboard\view_stats.php(20): include()
+#1 {main}
+  thrown in C:\xampp\htdocs\invoice_belanja_client\dashboard\content_view_stats.php on line 73
+[12-Oct-2022 07:29:20 Asia/Jakarta] PHP Notice:  Undefined variable: sessionappsid in C:\xampp\htdocs\invoice_belanja_client\dashboard\content_view_stats.php on line 16
+[12-Oct-2022 07:29:20 Asia/Jakarta] PHP Notice:  Undefined variable: sessionownerid in C:\xampp\htdocs\invoice_belanja_client\dashboard\content_view_stats.php on line 17
+[12-Oct-2022 07:29:20 Asia/Jakarta] PHP Fatal error:  Uncaught Error: Call to undefined function get_header_client_id() in C:\xampp\htdocs\invoice_belanja_client\dashboard\content_view_stats.php:74
+Stack trace:
+#0 C:\xampp\htdocs\invoice_belanja_client\dashboard\view_stats.php(20): include()
+#1 {main}
+  thrown in C:\xampp\htdocs\invoice_belanja_client\dashboard\content_view_stats.php on line 74
+[12-Oct-2022 07:29:35 Asia/Jakarta] PHP Fatal error:  Uncaught Error: Call to undefined function get_header_client_id() in C:\xampp\htdocs\invoice_belanja_client\dashboard\content_view_stats.php:74
+Stack trace:
+#0 C:\xampp\htdocs\invoice_belanja_client\dashboard\view_stats.php(20): include()
+#1 {main}
+  thrown in C:\xampp\htdocs\invoice_belanja_client\dashboard\content_view_stats.php on line 74
+[12-Oct-2022 07:30:40 Asia/Jakarta] PHP Fatal error:  Uncaught Error: Call to undefined function get_header_client_id() in C:\xampp\htdocs\invoice_belanja_client\dashboard\content_view_stats.php:74
+Stack trace:
+#0 C:\xampp\htdocs\invoice_belanja_client\dashboard\view_stats.php(20): include()
+#1 {main}
+  thrown in C:\xampp\htdocs\invoice_belanja_client\dashboard\content_view_stats.php on line 74
+[12-Oct-2022 07:31:45 Asia/Jakarta] PHP Notice:  Undefined index: apps_id in C:\xampp\htdocs\invoice_belanja_client\dashboard\content_view_stats.php on line 88
+[12-Oct-2022 07:31:45 Asia/Jakarta] PHP Notice:  Undefined index: owner_id in C:\xampp\htdocs\invoice_belanja_client\dashboard\content_view_stats.php on line 89
+[12-Oct-2022 07:31:45 Asia/Jakarta] PHP Notice:  Undefined index: owner_email in C:\xampp\htdocs\invoice_belanja_client\dashboard\content_view_stats.php on line 90
+[12-Oct-2022 07:31:45 Asia/Jakarta] PHP Notice:  Undefined index: quota_product in C:\xampp\htdocs\invoice_belanja_client\dashboard\content_view_stats.php on line 92
+[12-Oct-2022 07:31:45 Asia/Jakarta] PHP Notice:  Undefined index: quota_request_item in C:\xampp\htdocs\invoice_belanja_client\dashboard\content_view_stats.php on line 94
+[12-Oct-2022 07:31:45 Asia/Jakarta] PHP Notice:  Undefined index: quota_request_item in C:\xampp\htdocs\invoice_belanja_client\dashboard\content_view_stats.php on line 96
+[12-Oct-2022 07:31:45 Asia/Jakarta] PHP Notice:  Undefined index: current_quota_request_item in C:\xampp\htdocs\invoice_belanja_client\dashboard\content_view_stats.php on line 97
+[12-Oct-2022 07:31:45 Asia/Jakarta] PHP Notice:  Undefined index: available_quota_request_item in C:\xampp\htdocs\invoice_belanja_client\dashboard\content_view_stats.php on line 98
+[12-Oct-2022 07:31:45 Asia/Jakarta] PHP Notice:  Undefined index: header_client_id in C:\xampp\htdocs\invoice_belanja_client\dashboard\content_view_stats.php on line 99
+[12-Oct-2022 07:31:45 Asia/Jakarta] PHP Notice:  Undefined index: header_pass_key in C:\xampp\htdocs\invoice_belanja_client\dashboard\content_view_stats.php on line 100
+[12-Oct-2022 07:32:45 Asia/Jakarta] PHP Notice:  Undefined index: apps_id in C:\xampp\htdocs\invoice_belanja_client\dashboard\content_view_stats.php on line 95
+[12-Oct-2022 07:32:45 Asia/Jakarta] PHP Notice:  Undefined index: owner_id in C:\xampp\htdocs\invoice_belanja_client\dashboard\content_view_stats.php on line 96
+[12-Oct-2022 07:32:45 Asia/Jakarta] PHP Notice:  Undefined index: owner_email in C:\xampp\htdocs\invoice_belanja_client\dashboard\content_view_stats.php on line 97
+[12-Oct-2022 07:32:45 Asia/Jakarta] PHP Notice:  Undefined index: quota_product in C:\xampp\htdocs\invoice_belanja_client\dashboard\content_view_stats.php on line 99
+[12-Oct-2022 07:32:45 Asia/Jakarta] PHP Notice:  Undefined index: quota_request_item in C:\xampp\htdocs\invoice_belanja_client\dashboard\content_view_stats.php on line 101
+[12-Oct-2022 07:32:45 Asia/Jakarta] PHP Notice:  Undefined index: quota_request_item in C:\xampp\htdocs\invoice_belanja_client\dashboard\content_view_stats.php on line 103
+[12-Oct-2022 07:32:45 Asia/Jakarta] PHP Notice:  Undefined index: current_quota_request_item in C:\xampp\htdocs\invoice_belanja_client\dashboard\content_view_stats.php on line 104
+[12-Oct-2022 07:32:45 Asia/Jakarta] PHP Notice:  Undefined index: available_quota_request_item in C:\xampp\htdocs\invoice_belanja_client\dashboard\content_view_stats.php on line 105
+[12-Oct-2022 07:32:45 Asia/Jakarta] PHP Notice:  Undefined index: header_client_id in C:\xampp\htdocs\invoice_belanja_client\dashboard\content_view_stats.php on line 106
+[12-Oct-2022 07:32:45 Asia/Jakarta] PHP Notice:  Undefined index: header_pass_key in C:\xampp\htdocs\invoice_belanja_client\dashboard\content_view_stats.php on line 107
+[12-Oct-2022 07:33:29 Asia/Jakarta] PHP Notice:  Undefined index: apps_id in C:\xampp\htdocs\invoice_belanja_client\dashboard\content_view_stats.php on line 92
+[12-Oct-2022 07:33:29 Asia/Jakarta] PHP Notice:  Undefined index: owner_id in C:\xampp\htdocs\invoice_belanja_client\dashboard\content_view_stats.php on line 93
+[12-Oct-2022 07:33:29 Asia/Jakarta] PHP Notice:  Undefined index: owner_email in C:\xampp\htdocs\invoice_belanja_client\dashboard\content_view_stats.php on line 94
+[12-Oct-2022 07:33:29 Asia/Jakarta] PHP Notice:  Undefined index: quota_product in C:\xampp\htdocs\invoice_belanja_client\dashboard\content_view_stats.php on line 96
+[12-Oct-2022 07:33:29 Asia/Jakarta] PHP Notice:  Undefined index: quota_request_item in C:\xampp\htdocs\invoice_belanja_client\dashboard\content_view_stats.php on line 98
+[12-Oct-2022 07:33:29 Asia/Jakarta] PHP Notice:  Undefined index: quota_request_item in C:\xampp\htdocs\invoice_belanja_client\dashboard\content_view_stats.php on line 100
+[12-Oct-2022 07:33:29 Asia/Jakarta] PHP Notice:  Undefined index: current_quota_request_item in C:\xampp\htdocs\invoice_belanja_client\dashboard\content_view_stats.php on line 101
+[12-Oct-2022 07:33:29 Asia/Jakarta] PHP Notice:  Undefined index: available_quota_request_item in C:\xampp\htdocs\invoice_belanja_client\dashboard\content_view_stats.php on line 102
+[12-Oct-2022 07:33:29 Asia/Jakarta] PHP Notice:  Undefined index: header_client_id in C:\xampp\htdocs\invoice_belanja_client\dashboard\content_view_stats.php on line 103
+[12-Oct-2022 07:33:29 Asia/Jakarta] PHP Notice:  Undefined index: header_pass_key in C:\xampp\htdocs\invoice_belanja_client\dashboard\content_view_stats.php on line 104
+[12-Oct-2022 07:33:55 Asia/Jakarta] PHP Notice:  Undefined index: owner_id in C:\xampp\htdocs\invoice_belanja_client\dashboard\content_view_stats.php on line 93
+[12-Oct-2022 07:33:55 Asia/Jakarta] PHP Notice:  Undefined index: owner_email in C:\xampp\htdocs\invoice_belanja_client\dashboard\content_view_stats.php on line 94
+[12-Oct-2022 07:33:56 Asia/Jakarta] PHP Notice:  Undefined index: quota_product in C:\xampp\htdocs\invoice_belanja_client\dashboard\content_view_stats.php on line 96
+[12-Oct-2022 07:33:56 Asia/Jakarta] PHP Notice:  Undefined index: quota_request_item in C:\xampp\htdocs\invoice_belanja_client\dashboard\content_view_stats.php on line 98
+[12-Oct-2022 07:33:56 Asia/Jakarta] PHP Notice:  Undefined index: quota_request_item in C:\xampp\htdocs\invoice_belanja_client\dashboard\content_view_stats.php on line 100
+[12-Oct-2022 07:33:56 Asia/Jakarta] PHP Notice:  Undefined index: current_quota_request_item in C:\xampp\htdocs\invoice_belanja_client\dashboard\content_view_stats.php on line 101
+[12-Oct-2022 07:33:56 Asia/Jakarta] PHP Notice:  Undefined index: available_quota_request_item in C:\xampp\htdocs\invoice_belanja_client\dashboard\content_view_stats.php on line 102
+[12-Oct-2022 07:33:56 Asia/Jakarta] PHP Notice:  Undefined index: header_client_id in C:\xampp\htdocs\invoice_belanja_client\dashboard\content_view_stats.php on line 103
+[12-Oct-2022 07:33:56 Asia/Jakarta] PHP Notice:  Undefined index: header_pass_key in C:\xampp\htdocs\invoice_belanja_client\dashboard\content_view_stats.php on line 104
+[12-Oct-2022 07:37:15 Asia/Jakarta] PHP Notice:  Undefined variable: owner_email in C:\xampp\htdocs\invoice_belanja_client\dashboard\content_view_stats.php on line 132
+[12-Oct-2022 07:37:15 Asia/Jakarta] PHP Notice:  Undefined variable: quota_product in C:\xampp\htdocs\invoice_belanja_client\dashboard\content_view_stats.php on line 142
+[12-Oct-2022 07:37:15 Asia/Jakarta] PHP Notice:  Undefined variable: quota_request_item in C:\xampp\htdocs\invoice_belanja_client\dashboard\content_view_stats.php on line 143
+[12-Oct-2022 07:37:15 Asia/Jakarta] PHP Notice:  Undefined variable: current_quota_request_item in C:\xampp\htdocs\invoice_belanja_client\dashboard\content_view_stats.php on line 144
+[12-Oct-2022 07:37:15 Asia/Jakarta] PHP Notice:  Undefined variable: available_quota_request_item in C:\xampp\htdocs\invoice_belanja_client\dashboard\content_view_stats.php on line 145
