@@ -205,7 +205,8 @@ debug_text($namafile,$contentdebug);
 
 function call_api_proses_list_item($apps_id,$owner_id,$custom_id,$text_list_item,$Header_ClientID,$Header_PassKey) {
 	
-	$BASE_END_POINT_SAAS="http://139.59.234.51/invoice_belanja/API/";
+	include("../test_API/settings.php");
+
 	$BASE_END_POINT = $BASE_END_POINT_SAAS."API_proses_list_item.php";
 	//data 0
 
