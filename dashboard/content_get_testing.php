@@ -257,6 +257,14 @@ for ($i=0;$i<$jumlah_product;$i++) {
   $harga = $json_decode["product"][$i]["harga"];
   $k1 = $json_decode["product"][$i]["k1"];
   $is_active = $json_decode["product"][$i]["is_active"];
+
+  if ($is_active=="1") {
+    $info_avail = "Available";
+  }
+  else {
+   $info_avail = "NOT Available at this moment"; 
+  }
+
  
   
     if ($bariscolom==1) {
@@ -264,8 +272,9 @@ for ($i=0;$i<$jumlah_product;$i++) {
       $print .= "<div class='col-sm-4'>";
       $print .= $nourut.". ".$productname;
       $print .= "<br>Harga Rp .".number_format($harga);
+       $print .= "<br>Availability/Ketersediaan:".$info_avail;
       $print .= "<br>Deskripsi Satuan:".$deskripsi_satuan;
-      $print .= "<br>sku:".$sku;
+    $print .= "<br><a href='edit.php?sku=$sku'>sku:".$sku."</a>";
       $print .= "<br><br>";
       $print .= "</div>";
 
@@ -275,8 +284,9 @@ for ($i=0;$i<$jumlah_product;$i++) {
       $print .= "<div class='col-sm-8'>";
       $print .= $nourut.". ".$productname;
       $print .= "<br>Harga Rp .".number_format($harga);
+       $print .= "<br>Availability/Ketersediaan:".$info_avail;
       $print .= "<br>Deskripsi Satuan :".$deskripsi_satuan;
-       $print .= "<br>sku:".$sku;
+      $print .= "<br><a href='edit.php?sku=$sku'>sku:".$sku."</a>";
         $print .= "<br><br>";
     
       $print .= "</div>";
