@@ -23,6 +23,9 @@ Setelah semua ini dijalankan, kini toko anda selangkah lebih maju, anda memiliki
 yang dapat menerima order dari pelanggan, hanya dengan melakukan 1,2 atau puluhan entry item daftar belanja.
 Kini belanja bisa lebih cepat dan mudah.
 
+Catatan Penting :
+Anda harus memiliki account di https://botbelanja.com untuk memanfaatkan aplikasi ini.
+Saat ini sedang dalam masa development, Layanan Saas botbelanja.com Akan dibuka pada 20 Oktoner 2022
 
 Kukuh T Wicaksono
 Founder botbelanja.com
