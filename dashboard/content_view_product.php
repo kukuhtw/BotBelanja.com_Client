@@ -1,6 +1,6 @@
 <?php
  error_reporting(error_reporting() & ~E_NOTICE);
-include("db.php");
+ 
 include("saatini.php");
 
 ?>
