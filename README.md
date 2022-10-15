@@ -28,13 +28,14 @@ List To Do:
 2. Cloning repository ini ke vps cloud anda sendiri
 3. Ganti setting database configuration di file db.php
 4. Ganti setting di file test_API/settings.php , isi apps_id, owner_id, header_client_id, header_pass_key sesuai dengan informasi pada dashboard botbelanja.com
-5. Ganti setting di file webhook_fonnte/settings.php 
+5. Ganti setting di file webhook_fonnte/settings.php , daftar ke fonnte melalui link ini https://md.fonnte.com/register?ref=9 untuk mendapatkan bonus
 6. ambil mysql script di folder mysql, run script tersebut di server anda
+7. buat telegrambot, lalu sesuaikan setting api token dan botname di file webhook_telegram/telegram_settings.php
 
 
 Catatan Penting :
 Anda harus memiliki account di https://botbelanja.com untuk memanfaatkan aplikasi ini.
-Saat ini sedang dalam masa development, Layanan Saas botbelanja.com Akan dibuka pada 20 Oktoner 2022
+Saat ini sedang dalam masa development, Layanan Saas botbelanja.com Akan dibuka pada 20 Oktober 2022
 
 Kukuh T Wicaksono
 Founder botbelanja.com
