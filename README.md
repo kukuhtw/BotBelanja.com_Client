@@ -23,6 +23,11 @@ Setelah semua ini dijalankan, kini toko anda selangkah lebih maju, anda memiliki
 yang dapat menerima order dari pelanggan, hanya dengan melakukan 1,2 atau puluhan entry item daftar belanja.
 Kini belanja bisa lebih cepat dan mudah.
 
+Fungsi source code ini.
+1. Aplikasi Back Office Order Management
+2. Aplikasi backend untuk whatsapp bot
+3. Aplikasi backend untuk telegram bot
+
 List To Do:
 1. Buka account di botbelanja.com
 2. Cloning repository ini ke vps cloud anda sendiri
