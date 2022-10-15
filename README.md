@@ -28,6 +28,15 @@ Fungsi source code ini.
 2. Aplikasi backend untuk whatsapp bot
 3. Aplikasi backend untuk telegram bot
 
+Fungsi masing-masing folder
+1. folder dashboard , adalah apps backoffice order management, disini anda bisa mengelola order yang masuk, memasukkan data produk, update dan edit data produk
+2. folder mysql, adalah script mysql yang dapat anda generate di server database mysql anda.
+3. folder test_API, adalah tempat belajar untuk menggunakan API dari BotBelanja.com
+4. folder webhook_fonnte adalah tempat aplikasi backend whatsapp bot, anda harus memiliki account fonnte agar backend whatsapp bot dapat berfungsi di server anda. daftar fonnte disini https://md.fonnte.com/register?ref=9 
+5. folder webhook_telegram adalah tempat aplikasi backend telegram bot, anda harus memiliki telegrambot sendiri.
+6. folder website, adalah contoh aplikasi yang menunjukkan bahwa pelanggan anda dapat melakukan pemesanan dari halaman ini. video demo ada di https://www.youtube.com/watch?v=BpOiDStf80M
+
+
 List To Do:
 1. Buka account di botbelanja.com
 2. Cloning repository ini ke vps cloud anda sendiri
