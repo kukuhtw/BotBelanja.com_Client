@@ -23,6 +23,15 @@ Setelah semua ini dijalankan, kini toko anda selangkah lebih maju, anda memiliki
 yang dapat menerima order dari pelanggan, hanya dengan melakukan 1,2 atau puluhan entry item daftar belanja.
 Kini belanja bisa lebih cepat dan mudah.
 
+List To Do:
+1. Buka account di botbelanja.com
+2. Cloning repository ini ke vps cloud anda sendiri
+3. Ganti setting database configuration di file db.php
+4. Ganti setting di file test_API/settings.php , isi apps_id, owner_id, header_client_id, header_pass_key sesuai dengan informasi pada dashboard botbelanja.com
+5. Ganti setting di file webhook_fonnte/settings.php 
+6. ambil mysql script di folder mysql, run script tersebut di server anda
+
+
 Catatan Penting :
 Anda harus memiliki account di https://botbelanja.com untuk memanfaatkan aplikasi ini.
 Saat ini sedang dalam masa development, Layanan Saas botbelanja.com Akan dibuka pada 20 Oktoner 2022
