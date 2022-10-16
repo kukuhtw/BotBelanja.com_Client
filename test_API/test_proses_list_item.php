@@ -23,7 +23,10 @@ echo "<br>saatini : ".$saatini;
 //echo "<br>call_api_proses_list_item : ".$call_api_proses_list_item;
 
 
-
+if ($status!="200") {
+    echo "<br>Status :".$status;
+    exit;
+}
 
 $j = intval(count($json_decode["list_available_product"]));
 //echo "<br>j : ".$j;
