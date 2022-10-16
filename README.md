@@ -23,9 +23,33 @@ Setelah semua ini dijalankan, kini toko anda selangkah lebih maju, anda memiliki
 yang dapat menerima order dari pelanggan, hanya dengan melakukan 1,2 atau puluhan entry item daftar belanja.
 Kini belanja bisa lebih cepat dan mudah.
 
+Fungsi source code ini.
+1. Aplikasi Back Office Order Management
+2. Aplikasi backend untuk whatsapp bot
+3. Aplikasi backend untuk telegram bot
+
+Fungsi masing-masing folder
+1. folder dashboard , adalah apps backoffice order management, disini anda bisa mengelola order yang masuk, memasukkan data produk, update dan edit data produk
+2. folder mysql, adalah script mysql yang dapat anda generate di server database mysql anda.
+3. folder test_API, adalah tempat belajar untuk menggunakan API dari BotBelanja.com
+4. folder webhook_fonnte adalah tempat aplikasi backend whatsapp bot, anda harus memiliki account fonnte agar backend whatsapp bot dapat berfungsi di server anda. daftar fonnte disini https://md.fonnte.com/register?ref=9 
+5. folder webhook_telegram adalah tempat aplikasi backend telegram bot, anda harus memiliki telegrambot sendiri.
+6. folder website, adalah contoh aplikasi yang menunjukkan bahwa pelanggan anda dapat melakukan pemesanan dari halaman ini. video demo ada di https://www.youtube.com/watch?v=BpOiDStf80M
+
+
+List To Do:
+1. Buka account di botbelanja.com
+2. Cloning repository ini ke vps cloud anda sendiri
+3. Ganti setting database configuration di file db.php
+4. Ganti setting di file test_API/settings.php , isi apps_id, owner_id, header_client_id, header_pass_key sesuai dengan informasi pada dashboard botbelanja.com
+5. Ganti setting di file webhook_fonnte/settings.php , daftar ke fonnte melalui link ini https://md.fonnte.com/register?ref=9 untuk mendapatkan bonus
+6. ambil mysql script di folder mysql, run script tersebut di server anda
+7. buat telegrambot, lalu sesuaikan setting api token dan botname di file webhook_telegram/telegram_settings.php
+
+
 Catatan Penting :
 Anda harus memiliki account di https://botbelanja.com untuk memanfaatkan aplikasi ini.
-Saat ini sedang dalam masa development, Layanan Saas botbelanja.com Akan dibuka pada 20 Oktoner 2022
+Saat ini sedang dalam masa development, Layanan Saas botbelanja.com Akan dibuka pada 20 Oktober 2022
 
 Kukuh T Wicaksono
 Founder botbelanja.com
