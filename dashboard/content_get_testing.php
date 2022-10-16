@@ -220,7 +220,10 @@ $text_list_item=str_replace("<br />","",$text_list_item);
 <input type="submit" name="submit" value="Send">
 </form>
 <p>&nbsp;</p>
-
+Catatan : 
+<br>1. Setiap pengiriman 1 baris request identifikasi 1 item produk , memerlukan 1 hits saldo.
+<br>2. Saldo hits anda akan berkurang untuk setiap 1 item . baris identifikasi request.
+<p>&nbsp;</p>
 <h2>CATALOG</h2>
 <p>&nbsp;</p>
 
