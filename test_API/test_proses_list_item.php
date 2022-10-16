@@ -3,13 +3,8 @@
 
 include("settings.php");
 
-$custom_id = "DEMO2_DARI_TEST_API_WEBSITE";
-$text_list_item = "Daftar Belanja\n\n2 jus apel sunfresh\n2 jus jambu sunfresh\r\n3 jus jambu buavita\n1 botol Aqua 600 ml\n2 box Aqua 330 ml\n1 ipad 2\n6 jeruk pamelo\n2 jeruk kupas\n1 iphone 13max\n1 INDOMIE MIE GORENG 10 bungkus\n2 Indomie Goreng 1 dus isi 40 pcs\n1 telur ayam kampung isi 30\n3 lemon segar\n5 jus jeruk\n5 jus nanas\n2 juice mangga\n1 jus sirsak\n10 AQUA Gelas 240 ml";
-
-
+$custom_id = "DEMO";
 $text_list_item = "3 Aqua 1 Dus is 24 botol 600 ml\n2 LPG 12 Kg\n2 LPG 3 Kg\n5 Aqua Gelas 220 ml\n2 Aqua Botol 600 ml\n";
-//$text_list_item = "3 Aqua 1 Dus is 24 botol 600 ml\r\n2 LPG 12 Kg\r\n2 LPG 3 Kg\r\n5 Aqua Gelas 220 ml\r\n2 Aqua Botol 600 ml\r\n";
-
 
 
 $call_api_proses_list_item = call_api_proses_list_item($apps_id,$owner_id,$custom_id,$text_list_item,$Header_ClientID,$Header_PassKey);
