@@ -13,6 +13,12 @@ $json_decode = json_decode($call_api_proses_list_item,true);
 
 $status=$json_decode["status"];
 $result=$json_decode["result"];
+
+if ($status!="200") {
+    echo "<br>Status :".$status;
+    exit;
+}
+
 $custom_id=$json_decode["custom_id"];
 $saatini=$json_decode["saatini"];
 
@@ -23,10 +29,6 @@ echo "<br>saatini : ".$saatini;
 //echo "<br>call_api_proses_list_item : ".$call_api_proses_list_item;
 
 
-if ($status!="200") {
-    echo "<br>Status :".$status;
-    exit;
-}
 
 $j = intval(count($json_decode["list_available_product"]));
 //echo "<br>j : ".$j;
