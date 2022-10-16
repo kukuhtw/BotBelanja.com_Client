@@ -43,6 +43,7 @@ List To Do:
 3. Ganti setting database configuration di file db.php
 4. Ganti setting di file test_API/settings.php , isi apps_id, owner_id, header_client_id, header_pass_key sesuai dengan informasi pada dashboard botbelanja.com
 5. Ganti setting di file webhook_fonnte/settings.php , daftar ke fonnte melalui link ini https://md.fonnte.com/register?ref=9 untuk mendapatkan bonus
+6, Ganti setting di file website/settings.php , untuk mencegah adanya bot yang menganggu server anda, proteksi dengan recaptcha google, isi dengan recaptcha google anda. dapatkan sitekey dan secret key domain anda disini https://www.google.com/recaptcha
 6. ambil mysql script di folder mysql, run script tersebut di server anda
 7. buat telegrambot, lalu sesuaikan setting api token dan botname di file webhook_telegram/telegram_settings.php
 
