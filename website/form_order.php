@@ -4,9 +4,11 @@ error_reporting(E_ALL);
 ini_set("error_log", "form_order_error.txt");
  ini_set('display_errors', 'On');
 
+
 include("../test_API/settings.php");
 include("../db.php");
 
+$text_list_item="";
 $send_messages="";
 $mode= isset($_POST['mode']) ? $_POST['mode'] : '';
 $name= isset($_POST['name']) ? $_POST['name'] : '';
@@ -30,10 +32,10 @@ if ($mode=="ORDER" && $alamatkirim!="" && $daftar_belanja!="" ) {
 	include("../test_API/settings.php");
 
 	//proses here
-	echo "<br>name : ".$name;
-	echo "<br>email : ".$email;
-	echo "<br>wanumber : ".$wanumber;
-	echo "<br>daftar_belanja : ".$daftar_belanja;
+	//echo "<br>name : ".$name;
+	//echo "<br>email : ".$email;
+	//echo "<br>wanumber : ".$wanumber;
+	//echo "<br>daftar_belanja : ".$daftar_belanja;
 
 	$custom_id = $email. " ".$wanumber." ".$name;
 	$text_list_item = $daftar_belanja;
@@ -44,33 +46,41 @@ if ($mode=="ORDER" && $alamatkirim!="" && $daftar_belanja!="" ) {
 
 	$status=$json_decode["status"];
 	$result=$json_decode["result"];
-	$custom_id=$json_decode["custom_id"];
-	$saatini=$json_decode["saatini"];
 
-	echo "<br>status : ".$status;
+ echo "<br>status : ".$status;
 	echo "<br>result : ".$result;
-	echo "<br>custom_id : ".$custom_id;
-	echo "<br>saatini : ".$saatini;
-	//echo "<br>call_api_proses_list_item : ".$call_api_proses_list_item;
-
-
-
-
-	$j = intval(count($json_decode["list_available_product"]));
-	//echo "<br>j : ".$j;
-
-	$jumlah_data_produk_ada =$j;
-
-	echo "<br>jumlah_data_produk_ada : ".$jumlah_data_produk_ada;
-
-
-	$jumlah_unavailableproduct=isset($json_decode["list_unavailable_product"][0]["nomorurut"]) ? $json_decode["list_unavailable_product"][0]["nomorurut"] : 0;
-
-	$jumlah_data_produk_tidak_ada = intval(count($json_decode["list_unavailable_product"]));
-	$grand_total=$json_decode["grand_total"];
-	$grand_total_f=number_format($grand_total);
-
+	
 	if ($status=="200") {
+
+		   
+
+			$custom_id=$json_decode["custom_id"];
+			$saatini=$json_decode["saatini"];
+
+			//echo "<br>status : ".$status;
+			//echo "<br>result : ".$result;
+			//echo "<br>custom_id : ".$custom_id;
+			//echo "<br>saatini : ".$saatini;
+			//echo "<br>call_api_proses_list_item : ".$call_api_proses_list_item;
+
+
+
+
+			$j = intval(count($json_decode["list_available_product"]));
+			//echo "<br>j : ".$j;
+
+			$jumlah_data_produk_ada =$j;
+
+			//echo "<br>jumlah_data_produk_ada : ".$jumlah_data_produk_ada;
+
+
+			$jumlah_unavailableproduct=isset($json_decode["list_unavailable_product"][0]["nomorurut"]) ? $json_decode["list_unavailable_product"][0]["nomorurut"] : 0;
+
+			$jumlah_data_produk_tidak_ada = intval(count($json_decode["list_unavailable_product"]));
+			$grand_total=$json_decode["grand_total"];
+			$grand_total_f=number_format($grand_total);
+
+
 		//insert to table order
 		$sql_insert_1=" insert into `order` 
 		(`orderdate`,`namapembeli`,`alamatkirim`,`emailpembeli`,`wapembeli`,`json_item`,`apps_id`,`owner_id`,`grandtotal`,`is_paid`,`paid_date`)
@@ -156,6 +166,11 @@ if ($mode=="ORDER" && $alamatkirim!="" && $daftar_belanja!="" ) {
 				
 			}
 
+
+			$text_list_item = nl2br(stripcslashes($text_list_item));
+			$text_list_item=str_replace("<br />","",$text_list_item);
+
+
 			$text_list_item_html=$text_list_item;
 			$text_list_item_html=str_replace("\r\n","<br>",$text_list_item_html);
 
@@ -205,6 +220,14 @@ if ($mode=="ORDER" && $alamatkirim!="" && $daftar_belanja!="" ) {
 
 		//BILA TERJADI GAGAL
 		if ($status!="200") {
+
+			$text_list_item = nl2br(stripcslashes($text_list_item));
+			$text_list_item=str_replace("<br />","",$text_list_item);
+
+
+			$text_list_item_html=$text_list_item;
+			$text_list_item_html=str_replace("\r\n","<br>",$text_list_item_html);
+
 			$send_messages=$result;
 		
 		}
@@ -265,7 +288,7 @@ include("menu.php");
 <br>Whatsapp : Tulis dengan format kode negara, sebagai contoh 6281xxxxxxx untuk negara Indonesia
 <br><input type="text" name="wanumber" value="<?php echo $wanumber ?>" required>
 <br>Daftar Belanja:
-<br><textarea name="daftar_belanja" rows="5" cols="80" required></textarea>
+<br><textarea name="daftar_belanja" rows="5" cols="80" required><?php echo $text_list_item ?></textarea>
 <br>Alamat Pengiriman: Tulis lengkap disertai kodepos
 <br><textarea name="alamatkirim" rows="5" cols="80" required><?php echo $alamatkirim ?></textarea>
 
