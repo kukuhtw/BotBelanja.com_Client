@@ -3,11 +3,52 @@ define('DEBUG', true);
 error_reporting(E_ALL);
 ini_set("error_log", "form_order_error.txt");
  ini_set('display_errors', 'On');
-
-
 include("../test_API/settings.php");
 include("../db.php");
+?>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <title>Form Order</title>
 
+    <!-- Bootstrap core CSS-->
+    <link href="../dashboard/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Custom fonts for this template-->
+    <link href="../dashboard/vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
+
+    <!-- Page level plugin CSS-->
+    <link href="../dashboard/vendor/datatables/dataTables.bootstrap4.css" rel="stylesheet">
+
+    <!-- Custom styles for this template-->
+    <link href="../dashboard/css/sb-admin.css" rel="stylesheet">
+     <script src="../dashboard/js/jquery-3.3.1.min.js"></script>
+     <script src="../dashboard/js/jquery-ui.min.js"></script>
+
+
+    <link rel="stylesheet" href="../dashboard/css/multi-select.css" type="text/css">
+    <script type="text/javascript" src="../dashboard/js/jquery.multi-select.js"></script>    
+
+<?php
+//domain setting recaptcha anda disini
+include("settings.php");
+?>
+   <script src="https://www.google.com/recaptcha/api.js?render=<?php echo $SiteKey ?>"></script>
+      <script>
+        grecaptcha.ready(function () {
+            grecaptcha.execute('<?php echo $SiteKey ?>', { action: 'contact' }).then(function (token) {
+                var recaptchaResponse = document.getElementById('recaptchaResponse');
+                recaptchaResponse.value = token;
+            });
+        });
+    </script>
+    
+  </head>
+<?php
 $text_list_item="";
 $send_messages="";
 $mode= isset($_POST['mode']) ? $_POST['mode'] : '';
@@ -30,6 +71,32 @@ $alamatkirim=mysqli_escape_string($link,$alamatkirim);
  $send_messages="";
 if ($mode=="ORDER" && $alamatkirim!="" && $daftar_belanja!="" ) {
 	include("../test_API/settings.php");
+
+  //domain setting recaptcha anda disini 
+  include("settings.php");
+
+
+   // Build POST request:
+    $recaptcha_url = 'https://www.google.com/recaptcha/api/siteverify';
+    $recaptcha_secret = $SecretKey;
+    $recaptcha_response = $_POST['recaptcha_response'];
+
+    // Make and decode POST request:
+    $recaptcha = file_get_contents($recaptcha_url . '?secret=' . $recaptcha_secret . '&response=' . $recaptcha_response);
+    $recaptcha = json_decode($recaptcha);
+
+    // Take action based on the score returned:
+   // echo "<br>recaptcha->score : ".$recaptcha->score;
+	
+	if ($recaptcha->score >= 0.5) {
+	
+	 } else {
+        // Not verified - show form error
+		echo "<br>Oke<br><br><a href='form_order.php'>Terindikasi Bot!</a>";
+		//exit;
+    }
+	///select count(`id`) as `total`,`id`,`owner_name`,`owner_email` from `msowner` where `owner_email`='kukuhtw@gmail.com'
+
 
 	//proses here
 	//echo "<br>name : ".$name;
@@ -239,35 +306,7 @@ if ($mode=="ORDER" && $alamatkirim!="" && $daftar_belanja!="" ) {
 <?php
 include("../test_API/settings.php");
 ?>
-<html lang="en">
-<head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <meta name="description" content="">
-    <meta name="author" content="">
-    <title>Form Order</title>
 
-    <!-- Bootstrap core CSS-->
-    <link href="../dashboard/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
-
-    <!-- Custom fonts for this template-->
-    <link href="../dashboard/vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
-
-    <!-- Page level plugin CSS-->
-    <link href="../dashboard/vendor/datatables/dataTables.bootstrap4.css" rel="stylesheet">
-
-    <!-- Custom styles for this template-->
-    <link href="../dashboard/css/sb-admin.css" rel="stylesheet">
-     <script src="../dashboard/js/jquery-3.3.1.min.js"></script>
-     <script src="../dashboard/js/jquery-ui.min.js"></script>
-
-
-    <link rel="stylesheet" href="../dashboard/css/multi-select.css" type="text/css">
-    <script type="text/javascript" src="../dashboard/js/jquery.multi-select.js"></script>    
-
-
-  </head>
   <body id="page-top">
   	  <div id="content-wrapper">
 
@@ -291,7 +330,7 @@ include("menu.php");
 <br><textarea name="daftar_belanja" rows="5" cols="80" required><?php echo $text_list_item ?></textarea>
 <br>Alamat Pengiriman: Tulis lengkap disertai kodepos
 <br><textarea name="alamatkirim" rows="5" cols="80" required><?php echo $alamatkirim ?></textarea>
-
+  <input type="hidden" name="recaptcha_response" id="recaptchaResponse">
 <input type="hidden" name="mode" value="ORDER">
 <br><input type="submit" name="" value="Order">
 
