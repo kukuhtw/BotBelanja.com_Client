@@ -95,9 +95,7 @@ if ($mode=="ORDER" && $alamatkirim!="" && $daftar_belanja!="" ) {
 		echo "<br>Oke<br><br><a href='form_order.php'>Terindikasi Bot!</a>";
 		//exit;
     }
-	///select count(`id`) as `total`,`id`,`owner_name`,`owner_email` from `msowner` where `owner_email`='kukuhtw@gmail.com'
-
-
+	
 	//proses here
 	//echo "<br>name : ".$name;
 	//echo "<br>email : ".$email;
