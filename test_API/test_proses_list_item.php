@@ -46,45 +46,45 @@ $grand_total=$json_decode["grand_total"];
 
 $send_messages="";
 for ($i=0;$i<$jumlah_data_produk_ada;$i++) {
-	$nomorurut=$json_decode["list_available_product"][$i]["nomorurut"];
-	$SKU=$json_decode["list_available_product"][$i]["SKU"];
-	$productname=$json_decode["list_available_product"][$i]["productname"];
-	$hargasatuan=$json_decode["list_available_product"][$i]["hargasatuan"];
-	$qty=$json_decode["list_available_product"][$i]["qty"];
+    $nomorurut=$json_decode["list_available_product"][$i]["nomorurut"];
+    $SKU=$json_decode["list_available_product"][$i]["SKU"];
+    $productname=$json_decode["list_available_product"][$i]["productname"];
+    $hargasatuan=$json_decode["list_available_product"][$i]["hargasatuan"];
+    $qty=$json_decode["list_available_product"][$i]["qty"];
     $deskripsi_satuan=$json_decode["list_available_product"][$i]["deskripsi_satuan"];
-	$totalharga=$json_decode["list_available_product"][$i]["totalharga"];
-	$cartdate=$json_decode["list_available_product"][$i]["cartdate"];
-	$send_messages.="\r\n".$nomorurut.". ".$productname;
-	$send_messages.="\r\nHarga Satuan : Rp ".number_format($hargasatuan);
-	$send_messages.="\r\nJumlah dibeli: ".number_format($qty);
-	$send_messages.="\r\nSatuan: ".$deskripsi_satuan;
-	$send_messages.="\r\nTotal Harga: ".number_format($totalharga);
-	$send_messages.="\r\n";
-	
+    $totalharga=$json_decode["list_available_product"][$i]["totalharga"];
+    $cartdate=$json_decode["list_available_product"][$i]["cartdate"];
+    $send_messages.="\r\n".$nomorurut.". ".$productname;
+    $send_messages.="\r\nHarga Satuan : Rp ".number_format($hargasatuan);
+    $send_messages.="\r\nJumlah dibeli: ".number_format($qty);
+    $send_messages.="\r\nSatuan: ".$deskripsi_satuan;
+    $send_messages.="\r\nTotal Harga: ".number_format($totalharga);
+    $send_messages.="\r\n";
+    
 }
 $send_messages.="\r\nGrand Total: Rp ".number_format($grand_total);
 
 echo "<br><br>jumlah_data_produk_tidak_ada : ".$jumlah_data_produk_tidak_ada;
 
 if ($jumlah_data_produk_tidak_ada>=2) {
-	$send_messages.="\r\n\r\nBarang tidak ada.";
+    $send_messages.="\r\n\r\nBarang tidak ada.";
 }
 if ($jumlah_data_produk_tidak_ada>=1) {
-	$send_messages.="\r\n\r\nSemua Barang yang dibeli ada!";
+    $send_messages.="\r\n\r\nSemua Barang yang dibeli ada!";
 
 }
 for ($i=0;$i<$jumlah_data_produk_tidak_ada;$i++) {
-	
+    
     
     $nomorurut=isset($json_decode["list_unavailable_product"][$i]["nomorurut"]) ? $json_decode["list_unavailable_product"][$i]["nomorurut"] : '';
 
-    	
+        
 
     $unavailable_product=isset($json_decode["list_unavailable_product"][$i]["unavailable_product"]) ? $json_decode["list_unavailable_product"][$i]["unavailable_product"] : '';
 
 
-	$send_messages.="\r\n".$nomorurut.". ".$unavailable_product;
-	
+    $send_messages.="\r\n".$nomorurut.". ".$unavailable_product;
+    
 }
 
 $text_list_item_html=$text_list_item;
@@ -93,7 +93,6 @@ $text_list_item_html=str_replace("\r\n","<br>",$text_list_item_html);
 echo $send_messages;
 $send_messages=str_replace("\r\n","%0a",$send_messages);
 //$send_messages=nl2br($send_messages);
-echo "<br><a href='https://wa.me/628129893706?text=".$send_messages."'>Kirim</a>";
 
 $html = $send_messages;
 $html=str_replace("%0a","<br>",$html);
@@ -225,46 +224,46 @@ content: {
 */
 
 function call_api_proses_list_item($apps_id,$owner_id,$custom_id,$text_list_item,$Header_ClientID,$Header_PassKey) {
-	
+    
     include("settings.php");
 
-	$BASE_END_POINT = $BASE_END_POINT_SAAS."API_proses_list_item.php";
+    $BASE_END_POINT = $BASE_END_POINT_SAAS."API_proses_list_item.php";
 
-	$postData = array(
-	  'apps_id' => $apps_id ,
-	  'owner_id' => $owner_id ,
-	  'custom_id' => $custom_id ,
-	  'text_list_item' => $text_list_item	  
-	  );
-	//echo "<br>goint to set ch";
-	$ch = curl_init($BASE_END_POINT);
-	//echo "<br>ch=".$ch;
+    $postData = array(
+      'apps_id' => $apps_id ,
+      'owner_id' => $owner_id ,
+      'custom_id' => $custom_id ,
+      'text_list_item' => $text_list_item     
+      );
+    //echo "<br>goint to set ch";
+    $ch = curl_init($BASE_END_POINT);
+    //echo "<br>ch=".$ch;
 
-	$headers = array(
-	  'Content-Type: application/json'  ,
-	  'Accept: application/json'  ,
-	  "Client-ID: $Header_ClientID",
-	  "Pass-Key: $Header_PassKey||$Header_ClientID"
-	);
-	
-	curl_setopt($ch, CURLOPT_POST, 1);
-	curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
-	curl_setopt($ch, CURLOPT_HTTPHEADER, $headers);
-	curl_setopt($ch, CURLOPT_POSTFIELDS, json_encode($postData));
-	$content = curl_exec($ch);
-	$content = preg_replace('/[\x00-\x1F\x80-\xFF]/', '', $content);
-	$json = json_decode($content, true);
-	
-	echo "<br>BASE_END_POINT: ".$BASE_END_POINT;
-	echo "<br>headers: ".json_encode($headers);
-	echo "<br>postData: ".json_encode($postData);
-	echo "<br>content: ".$content;
-	//echo "<br>json: ".$json;
-	
-	$content_results = $content;
-	curl_close($ch);
+    $headers = array(
+      'Content-Type: application/json'  ,
+      'Accept: application/json'  ,
+      "Client-ID: $Header_ClientID",
+      "Pass-Key: $Header_PassKey||$Header_ClientID"
+    );
+    
+    curl_setopt($ch, CURLOPT_POST, 1);
+    curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
+    curl_setopt($ch, CURLOPT_HTTPHEADER, $headers);
+    curl_setopt($ch, CURLOPT_POSTFIELDS, json_encode($postData));
+    $content = curl_exec($ch);
+    $content = preg_replace('/[\x00-\x1F\x80-\xFF]/', '', $content);
+    $json = json_decode($content, true);
+    
+    echo "<br>BASE_END_POINT: ".$BASE_END_POINT;
+    echo "<br>headers: ".json_encode($headers);
+    echo "<br>postData: ".json_encode($postData);
+    echo "<br>content: ".$content;
+    //echo "<br>json: ".$json;
+    
+    $content_results = $content;
+    curl_close($ch);
 
-	return $content;
+    return $content;
 }
 
 
