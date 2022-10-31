@@ -776,8 +776,9 @@ if ($mode_order==1) {
 			$custom_id=$json_decode["custom_id"];
 			$saatini=$json_decode["saatini"];
 
-			$field="nama";
-			$namapembeli = check_fieldvalue_at_table_wa_user($senderid,$field,$saatini,$link,$mySQLserver,$mySQLdefaultdb,$mySQLuser,$mySQLpassword);
+			$field="sendername";
+			$sendername = check_fieldvalue_at_table_wa_user($senderid,$field,$saatini,$link,$mySQLserver,$mySQLdefaultdb,$mySQLuser,$mySQLpassword);
+			$namapembeli=$sendername;
 
 			$field="email";
 			$emailpembeli = check_fieldvalue_at_table_wa_user($senderid,$field,$saatini,$link,$mySQLserver,$mySQLdefaultdb,$mySQLuser,$mySQLpassword);
