@@ -1,0 +1,11 @@
+orderid;orderdate;sku;productname;hargasatuan;qty;total_harga;
+1;30 Oktober 2022 jam 22:06:29;BP001;Nasi Bebek Peking;25000;5;125000;
+1;30 Oktober 2022 jam 22:06:29;AC002;Nasi Ayam Chasio;25000;5;125000;
+1;30 Oktober 2022 jam 22:06:29;AC003;Ayam Canton 1 ekor;85000;5;425000;
+1;30 Oktober 2022 jam 22:06:29;AM001;Air mineral;5000;4;20000;
+1;30 Oktober 2022 jam 22:06:29;TH002;Tempe;1000;3;3000;
+1;30 Oktober 2022 jam 22:06:29;TH001;Tahu;1000;3;3000;
+1;30 Oktober 2022 jam 22:06:29;AC001;Nasi Ayam Canton;25000;3;75000;
+1;30 Oktober 2022 jam 22:06:29;NP001;Nasi Putih;5000;1;5000;
+
+;;;;;Grand Total;781000;
