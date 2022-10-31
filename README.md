@@ -2,7 +2,7 @@
 sample code to show how to utilize API botbelanja.com
 
 
-BotBelanja.com adalah layanan Software As A services, Membantu identifikasi catatan daftar belanja menjadi invoice,
+https://BotBelanja.com adalah layanan Software As A services, Membantu identifikasi catatan daftar belanja menjadi invoice,
 data invoice berupa nama produk dan harga didapat dari data produk yang anda setorkan kepada kami.
 
 BotBelanja.com menyediakan source code gratis yang dapat anda gunakan untuk memanfaatkan API dari BotBelanja.com
