@@ -53,7 +53,6 @@ List To Do:
 
 Catatan Penting :
 Anda harus memiliki account di https://botbelanja.com untuk memanfaatkan aplikasi ini.
-Saat ini sedang dalam masa development, Layanan Saas botbelanja.com Akan dibuka pada 20 Oktober 2022
 
 Kukuh T Wicaksono
 Founder botbelanja.com
