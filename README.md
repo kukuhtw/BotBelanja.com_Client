@@ -12,6 +12,9 @@ untuk meletakkan aplikasi backend chatbot, aplikasi back office order management
 BotBelanja.com tidak menyimpan data pelanggan anda. BotBelanja.com hanya membantu mengidentifikasi catatan belanja pelanggan anda
 mejadi invoice sesuai data inventory produk yang anda jual.
 
+cara order belanja nggak ribet, pelanggan anda pasti betah dengan cara belanja seperti ini. Demo video whatsapp bot, telegram bot dan website back office order management dapat disaksikan di link ini
+https://kukuhtw.medium.com/botbelanja-com-147230ffe79d
+
 Untuk mendapatkan layanan ini, anda 
 
 1. Memiliki vps cloud hosting sendiri
