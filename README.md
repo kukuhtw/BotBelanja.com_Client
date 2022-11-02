@@ -3,7 +3,9 @@ sample code to show how to utilize API botbelanja.com
 
 
 https://BotBelanja.com adalah layanan Software As A services, Membantu identifikasi catatan daftar belanja menjadi invoice,
-data invoice berupa nama produk dan harga didapat dari data produk yang anda setorkan kepada kami.
+data invoice berupa nama produk dan harga didapat dari data produk yang anda setorkan kepada kami. 
+Mempermudah pelanggan melakukan order barang hanya dengan cara mengirimkan
+daftar belanjanya saja, tanpa ada mekanisme `add product to cart` berulang kali.
 
 BotBelanja.com menyediakan source code gratis yang dapat anda gunakan untuk memanfaatkan API dari BotBelanja.com
 BotBelanja.com mendukung anda pemilik toko untuk memiliki infrastruktur vps hosting sendiri. VPS hosting diperlukan
