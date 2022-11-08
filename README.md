@@ -58,3 +58,5 @@ Anda harus memiliki account di https://botbelanja.com untuk memanfaatkan aplikas
 
 Kukuh T Wicaksono
 Founder botbelanja.com
+Facebook Page : https://www.facebook.com/profile.php?id=100083608342093
+
