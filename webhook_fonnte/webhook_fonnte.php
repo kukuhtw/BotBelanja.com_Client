@@ -47,14 +47,6 @@ $field="mode_order";
 $mode_order = check_fieldvalue_at_table_wa_user($senderid,$field,$saatini,$link,$mySQLserver,$mySQLdefaultdb,$mySQLuser,$mySQLpassword);
 
 
-	$namafile="check_line52.txt";
-		$contentdebug ="\r\nsenderid=".$senderid;
-		$contentdebug .="\r\nmode_isidata: ".$mode_isidata;
-		$contentdebug .="\r\nmode_order: ".$mode_order;
-			$contentdebug .="\r\nSaatini: ".$saatini;
-		debug_text($namafile,$contentdebug);
-
-	
 
 $custom_id=$sender;
 $text_list_item = $message;
@@ -419,14 +411,22 @@ if ($message=="CATALOG") {
 				   	  $print .="%0A";
 				  }
 
-				$header_csv="sku;category;productname;deskripsisatuan;harga;keyword;is_active;\n";
-			$namafile ="files/catalog_product.csv";
+			$NAMA_TOKO=str_replace(" ","",$NAMA_TOKO);
+			$NAMA_TOKO=stripcslashes($NAMA_TOKO);
+			$header_csv="sku;category;productname;deskripsisatuan;harga;keyword;is_active;\n";
+			$namafile ="files/catalog_product_".$NAMA_TOKO.".csv";
 			$full_csv=$header_csv.$content_csv;
 			write_File_csv($namafile,$full_csv);
 
+			$print_catalog="";
+			if ($namafile!="") {
+				$print_catalog .="Download catalog disini ".$URL_FOLDER_WA_FONNTE.$namafile;
+				$print_catalog .="\r\n";
+				$print_catalog .="\r\n";
+			}
 
 			$print= str_replace("%0A","\r\n",$print);
-			$response_message=$print;
+			$response_message=$print_catalog. $print;
 
 				$buttons[] = array(
 			 	"id" => "ORDER",
@@ -939,8 +939,12 @@ if ($mode_order==1) {
 			$response_content=str_replace("{{GRAND_TOTAL}}",$grand_total_f,$response_content);
 			
 		
+		$NAMA_TOKO=str_replace(" ","",$NAMA_TOKO);
+		$NAMA_TOKO=stripcslashes($NAMA_TOKO);
+		$RANDOM_FILE=rand(111111,9999999);
+
 $header_csv="orderid;orderdate;sku;productname;hargasatuan;qty;total_harga;\n";
-$namafile ="files/order_detail_id_".$order_id."_".rand(11111111,99999999).".csv";
+$namafile ="files/order_detail_id_".$order_id."_".$NAMA_TOKO."_".$RANDOM_FILE.".csv";
 $full_csv=$header_csv.$content_csv;
 write_File_csv($namafile,$full_csv);
 $FULL_URL_DOWNLOAD_ORDER = $URL_FOLDER_WA_FONNTE. $namafile;

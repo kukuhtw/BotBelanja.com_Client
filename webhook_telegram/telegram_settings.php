@@ -2,7 +2,7 @@
 $filehookname = "webhook_telegram.php";
 $API_KEY = ''; // Your Token API telegram bot
 $BOT_NAME = ''; // your botname
-
+$NAMA_TOKO="Toko Demo"; // Your Store Name Here
 $URL="https://api.telegram.org/bot".$API_KEY;
 $host="yourdomain.com/yourfolder"; //your domain and your folder
 $URL_BASE = "https://".$host."/webhook_telegram/".$filehookname;

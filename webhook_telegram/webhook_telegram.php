@@ -713,8 +713,12 @@ if ($mode_order==1) {
 		  file_get_contents($URL."/sendmessage?chat_id=$telegramid&parse_mode=HTML&text=$response_content");
 
 
+$NAMA_TOKO=str_replace(" ","",$NAMA_TOKO);
+$NAMA_TOKO=stripcslashes($NAMA_TOKO);
+$RANDOM_FILE=rand(111111,9999999);
+
 $header_csv="orderid;orderdate;sku;productname;hargasatuan;qty;total_harga;\n";
-$namafile ="files/order_detail_id_".$order_id.".csv";
+$namafile ="files/order_detail_id_".$order_id."_".$NAMA_TOKO."_".$RANDOM_FILE.".csv";
 $full_csv=$header_csv.$content_csv;
 write_File_csv($namafile,$full_csv);
 
